@@ -1,0 +1,1433 @@
+<!doctype html>
+<html lang="en">
+    <head >
+        <script>
+    var require = {
+        "baseUrl": "https://d12dkjq56sjcos.cloudfront.net/pub/static/version1561615190/frontend/BigBus/main/en_GB"
+    };
+</script>
+        <meta charset="utf-8"/><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta name="description" content="Take in the opulence and grandeur of the Emirates Palace Hotel, one of the most expensive hotels to ever be built. Learn more with Big Bus Tours. "/>
+<meta name="robots" content="INDEX,FOLLOW"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="theme-color" content="#ffffff"/>
+<title>Emirates Palace Hotel | Abu Dhabi Attractions | Big Bus Tours</title>
+<link  rel="stylesheet" type="text/css"  media="all" href="https://d12dkjq56sjcos.cloudfront.net/pub/static/version1561615190/_cache/merged/4a607472fa5c38fb523a10ca1d3f541e.min.css" />
+<script  type="text/javascript"  src="https://d12dkjq56sjcos.cloudfront.net/pub/static/version1561615190/_cache/merged/04730c46be8abae5a53f2b57c77dbf73.js"></script>
+<link  rel="apple-touch-icon" sizes="180x180" href="https://d12dkjq56sjcos.cloudfront.net/pub/static/version1561615190/frontend/BigBus/main/en_GB/images/favicons/apple-touch-icon.png" />
+<link  rel="icon" type="image/png" sizes="32x32" href="https://d12dkjq56sjcos.cloudfront.net/pub/static/version1561615190/frontend/BigBus/main/en_GB/images/favicons/favicon-32x32.png" />
+<link  rel="icon" type="image/png" sizes="16x16" href="https://d12dkjq56sjcos.cloudfront.net/pub/static/version1561615190/frontend/BigBus/main/en_GB/images/favicons/favicon-16x16.png" />
+<link  rel="manifest" href="https://d12dkjq56sjcos.cloudfront.net/pub/static/version1561615190/frontend/BigBus/main/en_GB/images/favicons/manifest.json" />
+<link  rel="mask-icon" color="#5bbad5" href="https://d12dkjq56sjcos.cloudfront.net/pub/static/version1561615190/frontend/BigBus/main/en_GB/images/favicons/safari-pinned-tab.svg" />
+<link  rel="icon" type="image/x-icon" href="https://d12dkjq56sjcos.cloudfront.net/pub/media/favicon/default/favicon.ico" />
+<link  rel="shortcut icon" type="image/x-icon" href="https://d12dkjq56sjcos.cloudfront.net/pub/media/favicon/default/favicon.ico" />
+        		    <link rel="alternate" href="https://www.bigbustours.com/en/abu-dhabi/abu-dhabi-landmarks-emirates-palace-hotel/" 
+	    hreflang="en" />  
+    	<link rel="canonical" href="https://www.bigbustours.com/en/abu-dhabi/abu-dhabi-landmarks-emirates-palace-hotel/" /><link rel="alternate" href="https://www.bigbustours.com/en/abu-dhabi/abu-dhabi-landmarks-emirates-palace-hotel/" hreflang="x-default" />	    <link rel="alternate" href="https://www.bigbustours.com/de/abu-dhabi/abu-dhabi-sehenswurdigkeiten-emirates-palace-hotel/" 
+	    hreflang="de" />  
+    	
+<meta name="p:domain_verify" content="a03a7064bddb3dc4e456741a36c9b4bf"/>
+
+<script type="text/javascript">
+// Parse the URL for name=value parameters
+function getParameterByName(name) {
+	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+	results = regex.exec(location.search);
+	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+// Give the URL parameter a variable name, default is cjevent
+var cjeventid = getParameterByName('cjevent');
+// Give the cookie a duration, this sets a duration of 1 year, for a 45 day cookie, you can replace 31536000 with
+3888000
+var now = new Date();
+var time = now.getTime();
+var expTime = time + 1000*31536000;
+now.setTime(expTime);
+// Set the cookie, this assigns a cookie name of ‘cjevent’
+if(cjeventid){
+	document.cookie = "cjevent=" + cjeventid + "; expires=" +now.toGMTString() + "; path=/";
+}
+// Read cookie, you can pass this function into the tag, i.e. CJEVENT=readCookie('cjevent')
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0) === ' ') {
+			c = c.substring(1,c.length);
+		}
+		if (c.indexOf(nameEQ) === 0) {
+			return c.substring(nameEQ.length,c.length);
+		}
+	}
+	return null;
+}
+</script>
+<!-- PCAPredict Address look up -->
+<script>(function (n, t, i, r) {
+    var u, f;
+    n[i] = n[i] || {}, n[i].initial = {
+        accountCode: "BUCKI11139",
+        host: "BUCKI11139.pcapredict.com"
+    }, n[i].on = n[i].on || function () {
+        (n[i].onq = n[i].onq || []).push(arguments)
+    }, u = t.createElement("script"), u.async = !0, u.src = r, f = t.getElementsByTagName("script")[0], f.parentNode.insertBefore(u, f)
+})(window, document, "pca", "//BUCKI11139.pcapredict.com/js/sensor.js")
+</script>
+<meta property="og:type" content="og:website" />
+<meta property="og:title" content="Emirates Palace Hotel | Abu Dhabi Attractions | Big Bus Tours" />
+<meta property="og:image" content="https://d12dkjq56sjcos.cloudfront.net/pub/media/magefan_blog/e/m/emirates-palace-hotel-abu-dhabi-big-bus-tours-dec-2016_1.jpg" />
+<meta property="og:description" content="Take in the opulence and grandeur of the Emirates Palace Hotel, one of the most expensive hotels to ever be built. Learn more with Big Bus Tours. " />
+<meta property="og:url" content="https://www.bigbustours.com/en/abu-dhabi/abu-dhabi-landmarks-emirates-palace-hotel/" />
+<script type="application/ld+json">
+	{"@context":"http:\/\/schema.org","@type":"WebPage","name":"Emirates Palace Hotel | Abu Dhabi Attractions | Big Bus Tours","description":"Take in the opulence and grandeur of the Emirates Palace Hotel, one of the most expensive hotels to ever be built. Learn more with Big Bus Tours. ","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/","name":"Abu Dhabi"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/abu-dhabi-landmarks-emirates-palace-hotel\/","name":"Emirates Palace Hotel"}}]}}</script>
+
+
+
+    </head>
+    <body data-container="body" data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://d12dkjq56sjcos.cloudfront.net/pub/static/version1561615190/frontend/BigBus/main/en_GB/images/loader-2.gif"}}' class="blog-post-abu-dhabi-landmarks-emirates-palace-hotel blog-post-view page-layout-2columns-right">
+        
+<script>
+    try {
+        if (!window.localStorage || !window.sessionStorage) {
+            throw new Error();
+        }
+
+        localStorage.setItem('storage_test', 1);
+        localStorage.removeItem('storage_test');
+    } catch(e) {
+        (function () {
+            var Storage = function (type) {
+                var data;
+
+                function createCookie(name, value, days) {
+                    var date, expires;
+
+                    if (days) {
+                        date = new Date();
+                        date.setTime(date.getTime()+(days * 24 * 60 * 60 * 1000));
+                        expires = '; expires=' + date.toGMTString();
+                    } else {
+                        expires = '';
+                    }
+                    document.cookie = name + '=' + value+expires+'; path=/';
+                }
+
+                function readCookie(name) {
+                    var nameEQ = name + '=',
+                        ca = document.cookie.split(';'),
+                        i = 0,
+                        c;
+
+                    for (i=0; i < ca.length; i++) {
+                        c = ca[i];
+
+                        while (c.charAt(0) === ' ') {
+                            c = c.substring(1,c.length);
+                        }
+
+                        if (c.indexOf(nameEQ) === 0) {
+                            return c.substring(nameEQ.length, c.length);
+                        }
+                    }
+
+                    return null;
+                }
+
+                function setData(data) {
+                    data = encodeURIComponent(JSON.stringify(data));
+                    createCookie(type === 'session' ? getSessionName() : 'localStorage', data, 365);
+                }
+
+                function clearData() {
+                    createCookie(type === 'session' ? getSessionName() : 'localStorage', '', 365);
+                }
+
+                function getData() {
+                    var data = type === 'session' ? readCookie(getSessionName()) : readCookie('localStorage');
+
+                    return data ? JSON.parse(decodeURIComponent(data)) : {};
+                }
+
+                function getSessionName() {
+                    if (!window.name) {
+                        window.name = new Date().getTime();
+                    }
+
+                    return 'sessionStorage' + window.name;
+                }
+
+                data = getData();
+
+                return {
+                    length: 0,
+                    clear: function () {
+                        data = {};
+                        this.length = 0;
+                        clearData();
+                    },
+
+                    getItem: function (key) {
+                        return data[key] === undefined ? null : data[key];
+                    },
+
+                    key: function (i) {
+                        var ctr = 0,
+                            k;
+
+                        for (k in data) {
+                            if (ctr.toString() === i.toString()) {
+                                return k;
+                            } else {
+                                ctr++
+                            }
+                        }
+
+                        return null;
+                    },
+
+                    removeItem: function (key) {
+                        delete data[key];
+                        this.length--;
+                        setData(data);
+                    },
+
+                    setItem: function (key, value) {
+                        data[key] = value.toString();
+                        this.length++;
+                        setData(data);
+                    }
+                };
+            };
+
+            window.localStorage.__proto__ = window.localStorage = new Storage('local');
+            window.sessionStorage.__proto__ = window.sessionStorage = new Storage('session');
+        })();
+    }
+</script>
+    <script>
+        require.config({
+            deps: [
+                'jquery',
+                'mage/translate',
+                'jquery/jquery-storageapi'
+            ],
+            callback: function ($) {
+                'use strict';
+
+                var dependencies = [],
+                    versionObj;
+
+                $.initNamespaceStorage('mage-translation-storage');
+                $.initNamespaceStorage('mage-translation-file-version');
+                versionObj = $.localStorage.get('mage-translation-file-version');
+
+                
+                if (versionObj.version !== 'fee5df3fdfc1729c838174d38c037cc5ca9977ba') {
+                    dependencies.push(
+                        'text!js-translation.json'
+                    );
+
+                }
+
+                require.config({
+                    deps: dependencies,
+                    callback: function (string) {
+                        if (typeof string === 'string') {
+                            $.mage.translate.add(JSON.parse(string));
+                            $.localStorage.set('mage-translation-storage', string);
+                            $.localStorage.set(
+                                'mage-translation-file-version',
+                                {
+                                    version: 'fee5df3fdfc1729c838174d38c037cc5ca9977ba'
+                                }
+                            );
+                        } else {
+                            $.mage.translate.add($.localStorage.get('mage-translation-storage'));
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "mage/cookies": {
+                "expires": null,
+                "path": "/",
+                "domain": ".bigbustours.com",
+                "secure": false,
+                "lifetime": "86400"
+            }
+        }
+    }
+</script>
+                
+    <!-- BEGIN INTILERY ANALYTICS CODE -->
+    <script type="text/javascript">
+        //<![CDATA[
+        
+        window.INTILERY = {};
+        var _itq = _itq || [];
+        _itq.push(["_setAccount", "116"]);
+        (function (t) {
+            var it = document.createElement(t), s = document.getElementsByTagName(t)[0];
+            it.type = 'text/javascript';
+            it.async = true;
+            it.src = '//www.intilery-analytics.com/rest/md/116';
+            s.parentNode.insertBefore(it, s);
+        })('script');
+
+        var toNameValuePairs = function (dataObj) {
+            var nameValArr = [];
+            for (var key in dataObj) {
+                if (dataObj.hasOwnProperty(key)) {
+                    nameValArr.push({'name': key, 'value': dataObj[key]});
+                }
+            }
+            return nameValArr;
+        };
+
+        function fetchEvents() {
+            
+            var oReq = new XMLHttpRequest();
+            oReq.onload = function (e) {
+                var events = e.target.response;
+                for (var i = 0; i < events.length; i++) {
+                    var event = events[i];
+                    event['eventname'] = event['eventname'] ? event['eventname'] : event['eventaction'];
+                                        if (event['eventaction'] == 'checkout' || event['eventaction'] == 'guest checkout') {
+                        var orderEventData = toNameValuePairs(event['eventdata']);
+                        var orderData = event['orderdata'];
+                        _itq.push(['_addTrans',
+                            orderData['orderNumber'],         // transaction ID - required (orderid)
+                            orderData['storeName'],           // affiliation or store name
+                            orderData['orderTotal'],          // total - required; Does not include Tax and Shipping
+                            orderData['orderTax'],            // tax
+                            orderData['orderShippingFee'],    // shipping
+                            orderData['orderShippingCity'],   // city
+                            orderData['orderShippingRegion'], // state or province
+                            orderData['orderCountry'],        // country
+                            orderEventData                    // extra data
+                        ]);
+                        for (var j = 0; event['orderitems'] && j < event['orderitems'].length; j++) {
+                            var item = event['orderitems'][j];
+                            var itemEventData = toNameValuePairs(item['eventdata']);
+                            var itemData = item['itemdata'];
+                            _itq.push(['_addItem',
+                                orderData['orderNumber'],  // transaction ID - necessary to associate item with transaction (orderid)
+                                itemData['itemSKU'],       // SKU/code - required
+                                itemData['itemName'],      // product name
+                                itemData['itemCategory'],  // category or variation
+                                itemData['itemPrice'],     // unit price - required
+                                itemData['itemQuantity'],  // quantity - required
+                                itemEventData              // extra data
+                            ]);
+                        }
+
+                        if (event['eventaction'] == 'guest checkout') {
+                            _itq.push(['_trackUserEvent', 'guest checkout', [
+                                {'name': 'Customer.Email', 'value': orderData['customerEmail']},
+                                {'name': 'Customer.Current Language', 'value': orderData['language']}
+                            ], event['eventname'], function () {
+                                _itq.push(['_trackUserEvent', 'sign out', [], 'Sign Out']);
+                            }]);
+                        }
+
+                    } else {
+                        var data = toNameValuePairs(event['eventdata']);
+                        _itq.push(['_trackUserEvent', event['eventaction'], data, event['eventname']]);
+                    }
+                }
+            };
+
+            oReq.open('GET', "https://www.bigbustours.com/en/abu-dhabi/intileryanalytics/eventdata/get/?" + new Date().getTime(), true);
+            oReq.responseType = 'json';
+            oReq.send();
+        }
+
+        var interval = setInterval(fetchEvents, 5000);
+        require(['jquery', 'underscore'], function($, _) {
+            clearInterval(interval);
+            $(document).ajaxComplete(_.debounce(fetchEvents, 1000));
+        });
+
+        //]]>
+    </script>
+    <!-- END INTILERY ANALYTICS CODE -->
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_GoogleTagManager/js/google-tag-manager-cart": {
+                "blockNames": ["category.products.list","product.info.upsell","catalog.product.related","checkout.cart.crosssell","search_result_list"],
+                "cookieAddToCart": "add_to_cart",
+                "cookieRemoveFromCart": "remove_from_cart"
+            }
+        }
+    }
+</script>
+<div class="page-wrapper"><header id="header" class="header"><div id="header-panel">
+<div class="container">
+	
+<div class="logo-container">
+	<a href="https://www.bigbustours.com/en/abu-dhabi/"><img src="https://d12dkjq56sjcos.cloudfront.net/pub/media/logo/stores/21/BBT_Horizontal_Logo_ABUDHABI.png"
+		 alt=""
+		 class="logo-image"
+		 		 	/></a>
+	<span class="fa fa-angle-down"></span>
+</div>	<div class="mobile-wrapper">
+		<div class="mobile-toggle action nav-toggle btn-square" data-action="toggle-nav" ><span class="fa fa-bars"></span></div>
+		<div class="pos-relative container">
+			<div class="mobile-logo">
+				<div class="mobile-logo-container">
+					<div class="logo-text-container"><b>BIG</b>BUS <b>TOURS</b></div>
+					<div class="sticky-logo">
+						
+<div class="logo-container">
+	<a href="https://www.bigbustours.com/en/abu-dhabi/"><img src="https://d12dkjq56sjcos.cloudfront.net/pub/media/logo/stores/21/BBT_Horizontal_Logo_ABUDHABI.png"
+		 alt=""
+		 class="logo-image"
+		 		 	/></a>
+	<span class="fa fa-angle-down"></span>
+</div>					</div>
+				</div>
+			</div>
+		</div>
+		<a href="https://www.bigbustours.com/en/abu-dhabi/find-a-bus-stop-abu-dhabi/"><div class="mobile-location btn-square"><span class="fa fa-map-marker"></span></div></a>
+	</div>
+
+	<div class="product-summary hidden">
+		<div class="product-summary-container">
+			<p class="product-paragraph">Tickets selected:</p>
+			<div class="inline">
+				<span class="product-container">
+					<span class="product-label"></span>
+					<span class="product-quantity">0</span>
+				</span>
+				<span class="product-day">1 day</span>
+				<a class="edit-btn">EDIT</a>
+			</div>
+			<div class="product-summary-total">
+				Total:&nbsp;<span class="product-price">
+					US$					<span class="sum-total"></span></span>
+			</div>
+		</div>
+		<div class="product-list-container">
+			<div class="product-list"></div>
+			<div class="arrow">
+				<span class="fa fa-angle-down"></span>
+			</div>
+		</div>
+	</div>
+
+<!--	it was a button with id #cart-button-desktop-->
+
+	<div class="cart-button-wrapper container">
+					<div data-block="minicart" class="minicart-wrapper" data-bind="scope: 'minicart_content'">
+	<span data-bind="if: getCartParam('summary_count') != false">
+		<a href="https://www.bigbustours.com/en/abu-dhabi/checkout/cart/">
+			<div class="btn btn-highlight go-to-cart">
+				<span class="fa fa-shopping-basket"></span>
+				<span class="cart-label">
+					<span class="cart-label top-summary-count counter qty empty" data-bind="css: { empty: getCartParam('summary_count') == 0 }, blockLoader: isLoading">
+						(<span class="counter-number" data-bind="html: getCartParam('summary_count')"></span>) -
+					</span>
+					<span class="top-summary-total" data-bind="html: getCartParam('subtotal')"></span>
+				</span>
+			</div>
+			<input type="hidden" data-bind="value: getCartParam('item_qty')" id="basket-quantity" />
+		</a>
+	</span>
+
+    <span data-bind="if: !getCartParam('summary_count') || getCartParam('summary_count') == 0">
+        <a href="https://www.bigbustours.com/en/abu-dhabi/abu-dhabi-tour-tickets-and-passes/abu-dhabi-bus-tours/" data-bind="attr: { href: getCartParam('quick_buy') == true ? 'javascript:void(0)' : 'https://www.bigbustours.com/en/abu-dhabi/abu-dhabi-tour-tickets-and-passes/abu-dhabi-bus-tours/'}">
+			<div class="btn btn-highlight buy-tickets" data-bind="attr: { class: getCartParam('quick_buy') == true ? 'btn btn-highlight buy-tickets quick-buy-link' : 'btn btn-highlight buy-tickets'}">
+				 <span class="fa fa-ticket-1 hidden-xs hidden-sm icon-align"></span>
+				 <span class="fa fa-ticket icon-align hidden-lg hidden-md"></span>
+				 <div class="cart-mobile-label hidden-lg hidden-md text-capitalize">BUY</div>
+				<span class="cart-label hidden-xs hidden-sm">BUY TICKETS</span>
+			</div>
+			<input type="hidden" value="0" id="basket-quantity" />
+		</a>
+	</span>
+
+    <script>
+        window.checkout = {"shoppingCartUrl":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/checkout\/cart\/","checkoutUrl":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/checkout\/","updateItemQtyUrl":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/","minicartMaxItemsVisible":1,"websiteId":"1","maxItemsToDisplay":10,"customerLoginUrl":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8,\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/captcha\/refresh\/","isRequired":false},"guest_checkout":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/captcha\/refresh\/","isRequired":false}}};
+        window.miniCartHref = 'https://www.bigbustours.com/en/abu-dhabi/abu-dhabi-tour-tickets-and-passes/abu-dhabi-bus-tours/';
+        window.currentCurrencySymbol = 'US$';
+    </script>
+    <script type="text/x-magento-init">
+    {
+        "[data-block='minicart']": {
+            "Magento_Ui/js/core/app": {"components":{"minicart_content":{"children":{"subtotal.container":{"children":{"subtotal":{"children":{"subtotal.totals":{"config":{"display_cart_subtotal_incl_tax":0,"display_cart_subtotal_excl_tax":1}}},"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/subtotal"}}},"component":"uiComponent","config":{"displayArea":"subtotalContainer"}},"extra_info":{"component":"uiComponent","config":{"displayArea":"extraInfo"}},"promotion":{"component":"uiComponent","config":{"displayArea":"promotion"}}},"component":"Magento_Checkout\/js\/view\/minicart","config":{"template":"Magento_Checkout\/minicart\/content"}}},"types":[]}        },
+        "*": {
+            "Magento_Ui/js/block-loader": "https://d12dkjq56sjcos.cloudfront.net/pub/static/version1561615190/frontend/BigBus/main/en_GB/images/loader-1.gif"
+        }
+    }
+    </script>
+    <span data-bind="if: getCartParam('quick_buy') && getCartParam('quick_buy') == true">
+            <script type="text/javascript">
+                window.onload = function(){
+                	if (typeof(hj) != 'undefined') {
+                		hj('trigger', 'vieqb_heatmap');
+					}
+                };
+            </script>
+    </span>    
+</div>
+			</div>
+</div></div><div class="header-scroll-container"><div id="header-navigation"><nav id="navigation" role="navigation">
+	<ul class="navigation-container list-inline">
+<li class="navigation-item"><a href="https://www.bigbustours.com/en/abu-dhabi/abu-dhabi-sightseeing-tours/" class="navigation-item">Our Bus Tours</a></li>
+<li class="navigation-item"><a href="https://www.bigbustours.com/en/abu-dhabi/abu-dhabi-routes-and-tour-maps/" class="navigation-item">Routes & Maps</a></li>
+<li class="navigation-item"><a href="https://www.bigbustours.com/en/abu-dhabi/abu-dhabi-tour-tickets-and-passes/abu-dhabi-bus-tours/?qty[adult]=0&qty[child]=0&focus=top-filter-form/" class="navigation-item">Tickets & Passes</a></li>
+<li class="navigation-item"><a href="https://www.bigbustours.com/en/abu-dhabi/discover-abu-dhabi/" class="navigation-item">Discover Abu Dhabi</a></li>
+<li class="navigation-item"><a href="https://www.bigbustours.com/en/abu-dhabi/help/" class="navigation-item">Help</a></li>
+</ul></nav>
+
+<div class="minicart-popup">
+	<div class="minicart-container">
+		<div class="minicart-header row">
+			<div class="col-xs-12">
+				<h3 class="minicart-title">
+					Added to basket				</h3>
+			</div>
+		</div>
+		<div class="minicart-body row">
+			<div class="col-xs-8 product-info">
+				<div class="product-title"></div>
+				<div class="product-description"></div>
+			</div>
+			<div class="col-xs-4 text-right">
+				<span class="msrp-price price-line-through"></span>
+				<span class="product-price"></span>
+			</div>
+		</div>
+		<div class="minicart-footer row">
+			<div class="col-xs-12">
+				<a href="https://www.bigbustours.com/en/abu-dhabi/checkout/cart/" class="btn btn-primary">Pay Now</a>
+			</div>
+			<div class="col-xs-12">
+				<span class="continue-shopping">Continue Browsing</span>
+			</div>
+		</div>
+	</div>
+</div></div><div id="header-options"><div class="container">
+			<div id="header-location-button" class="header-option-container">
+			<a href="https://www.bigbustours.com/en/abu-dhabi/find-a-bus-stop-abu-dhabi/" class="header-option-item">
+				<span class="fa fa-map-marker left-relative"></span>
+				<span>FIND A BUS STOP</span>
+				<span class="fa fa-angle-right hidden-md hidden-lg"></span>
+			</a>
+		</div>
+	
+	<div id="header-options-button" class="header-option-container">
+		<div class="header-option-item has-submenu">
+			<span class="header-options-language">English</span>
+			<span class="header-options-separator"> / </span>
+			
+<span class="header-options-currency">USD $</span>
+			<span class="fa fa-angle-down"></span>
+		</div>
+	</div>
+</div>
+
+<div class="header-options-button-sub-menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-xs-12 divider">
+				<div class="row">
+					<div class="col-md-2 col-xs-12">
+						<label class="sub-menu-label">Language</label>
+					</div>
+					<div class="col-md-10 col-xs-12">
+														<a href="#" class="btn btn-info selected" 
+									data-post='{"action":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/stores\/store\/switch\/","data":{"uenc":"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8=","___store":"abudhabi_en","___from_store":"abudhabi_en"}}'>
+									English								</a>
+															<a href="#" class="btn btn-info " 
+									data-post='{"action":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/stores\/store\/switch\/","data":{"uenc":"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2RlL2FidS1kaGFiaS9hYnUtZGhhYmktc2VoZW5zd3VyZGlna2VpdGVuLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8=","___store":"abudhabi_de","___from_store":"abudhabi_en"}}'>
+									Deutsch								</a>
+												</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="row">
+						<div class="col-md-2 col-xs-12">
+		<label class="sub-menu-label">Currency</label>
+	</div>
+	<div class="col-md-10 col-xs-12">
+		<form action="" method="post" name="currency_switch" style="display:inline-block" class="currency_switch">
+											<button type="button" class="action btn btn-info  currency-code-AUD" 
+					data-post='{"action":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/directory\/currency\/switch\/","data":{"currency":"AUD","uenc":"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8,"}}'>
+					AUD $				</button>
+										<button type="button" class="action btn btn-info  currency-code-GBP" 
+					data-post='{"action":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/directory\/currency\/switch\/","data":{"currency":"GBP","uenc":"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8,"}}'>
+					GBP £				</button>
+										<button type="button" class="action btn btn-info  currency-code-EUR" 
+					data-post='{"action":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/directory\/currency\/switch\/","data":{"currency":"EUR","uenc":"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8,"}}'>
+					EUR €				</button>
+										<button type="button" class="action btn btn-info selected  currency-code-USD" 
+					data-post='{"action":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/directory\/currency\/switch\/","data":{"currency":"USD","uenc":"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8,"}}'>
+					USD $				</button>
+			</form>
+</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div></div><div id="cookie-policy-popup">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-10 col-md-offset-1 cookie-policy-contents">
+				<p>
+	This website uses cookies to improve your experience. Carry on browsing if you're happy with this. <a href="https://www.bigbustours.com/en/abu-dhabi/cookie-policy/"> Learn more</a>.<button type="button" class="close-popup btn btn-primary -small" title="Got It!">Got it!</button></p>			</div>
+		</div>
+		<span class="close-popup"><i class="fa fa-close"></i></span>
+	</div>
+</div></header><main id="maincontent" class="page-main"><a id="contentarea" name="contentarea" tabindex="-1"></a>
+<div class="container"><div class="breadcrumbs-wrap">
+    <div class="breadcrumbs">
+        <ul class="items">
+                            <li class="item home">
+                                    <a href="https://www.bigbustours.com/en/abu-dhabi/" title="Go back to the homepage">
+                        <span>
+                                    						Abu Dhabi        					                        </span>
+    					&nbsp;<span class="fa fa-angle-right"></span>&nbsp;
+                    </a>
+                                </li>
+                            <li class="item blog_post">
+                                    <strong  itemprop="name">Emirates Palace Hotel</strong>
+                                </li>
+                    </ul>
+    </div>
+</div>
+</div> 	<div class="full-banner-container main-banner">
+	
+		<div class="banner-img-container parallax">
+			<img src="https://d12dkjq56sjcos.cloudfront.net/pub/media/magefan_blog/e/m/emirates-palace-hotel-abu-dhabi-big-bus-tours-dec-2016_1.jpg" alt="Emirates Palace Hotel in Abu Dhabi" title="Emirates Palace Hotel">
+		</div>
+	
+		<div class="banner-content container">
+			<h1 class="banner-title">Emirates Palace Hotel</h1>
+		</div>
+	
+	</div>
+<div class="columns"><div class="column main"><div class="page messages"><!-- <div data-bind="scope: 'messages'">
+    <div data-bind="foreach: { data: messages().messages, as: 'message' }" class="messages">
+        <div data-bind="attr: {
+            class: 'message-' + message.type + ' ' + message.type + ' message',
+            'data-ui-id': 'message-' + message.type
+        }">
+            <div data-bind="html: message.text"></div>
+        </div>
+    </div>
+</div> -->
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                        "messages": {
+                            "component": "Magento_Theme/js/view/messages"
+                        }
+                    }
+                }
+            }
+    }
+</script>
+</div><input name="form_key" type="hidden" value="ci753spuzKLR2rNj" /><script type="text/x-magento-init">
+{"*":{"Magento_Customer\/js\/section-config":{"sections":{"stores\/store\/switch":"*","directory\/currency\/switch":"*","*":["messages","quick-buy"],"customer\/account\/logout":["recently_viewed_product","recently_compared_product"],"customer\/account\/loginpost":"*","customer\/account\/createpost":"*","customer\/account\/editpost":"*","customer\/ajax\/login":["checkout-data","cart"],"catalog\/product_compare\/add":["compare-products"],"catalog\/product_compare\/remove":["compare-products"],"catalog\/product_compare\/clear":["compare-products"],"sales\/guest\/reorder":["cart"],"sales\/order\/reorder":["cart"],"checkout\/cart\/add":["cart"],"checkout\/cart\/delete":["cart"],"checkout\/cart\/updatepost":["cart"],"checkout\/cart\/updateitemoptions":["cart"],"checkout\/cart\/couponpost":["cart"],"checkout\/cart\/estimatepost":["cart"],"checkout\/cart\/estimateupdatepost":["cart"],"checkout\/onepage\/saveorder":["cart","checkout-data","last-ordered-items","checkout-fields"],"checkout\/sidebar\/removeitem":["cart"],"checkout\/sidebar\/updateitemqty":["cart"],"rest\/*\/v1\/carts\/*\/payment-information":["cart","checkout-data","last-ordered-items","instant-purchase"],"rest\/*\/v1\/guest-carts\/*\/payment-information":["cart","checkout-data"],"rest\/*\/v1\/guest-carts\/*\/selected-payment-method":["cart","checkout-data"],"rest\/*\/v1\/carts\/*\/selected-payment-method":["cart","checkout-data","instant-purchase"],"born_checkout\/cart\/groupdelete":["cart"],"wishlist\/index\/add":["wishlist"],"wishlist\/index\/remove":["wishlist"],"wishlist\/index\/updateitemoptions":["wishlist"],"wishlist\/index\/update":["wishlist"],"wishlist\/index\/cart":["wishlist","cart"],"wishlist\/index\/fromcart":["wishlist","cart"],"wishlist\/index\/allcart":["wishlist","cart"],"wishlist\/shared\/allcart":["wishlist","cart"],"wishlist\/shared\/cart":["cart"],"paypal\/express\/placeorder":["cart","checkout-data"],"paypal\/payflowexpress\/placeorder":["cart","checkout-data"],"customer\/address\/*":["instant-purchase"],"customer\/account\/*":["instant-purchase"],"vault\/cards\/deleteaction":["instant-purchase"],"wishlist\/index\/copyitem":["wishlist"],"wishlist\/index\/copyitems":["wishlist"],"wishlist\/index\/deletewishlist":["wishlist","multiplewishlist"],"wishlist\/index\/createwishlist":["multiplewishlist"],"wishlist\/index\/moveitem":["wishlist"],"wishlist\/index\/moveitems":["wishlist"],"wishlist\/search\/addtocart":["cart","wishlist"],"multishipping\/checkout\/overviewpost":["cart"],"review\/product\/post":["review"],"authorizenet\/directpost_payment\/place":["cart","checkout-data"],"braintree\/paypal\/placeorder":["cart","checkout-data"],"giftregistry\/index\/cart":["cart"],"giftregistry\/view\/addtocart":["cart"],"customer_order\/cart\/updatefaileditemoptions":["cart"],"checkout\/cart\/updatefaileditemoptions":["cart"],"customer_order\/cart\/advancedadd":["cart"],"checkout\/cart\/advancedadd":["cart"],"checkout\/cart\/removeallfailed":["cart"],"customer_order\/cart\/addfaileditems":["cart"],"checkout\/cart\/addfaileditems":["cart"],"customer_order\/sku\/uploadfile":["cart"],"rest\/*\/v1\/guest-carts\/*\/collection-point\/select":["collection-point-result"],"rest\/*\/v1\/carts\/mine\/collection-point\/select":["collection-point-result"]},"clientSideSections":["checkout-data","cart-data"],"baseUrls":["https:\/\/www.bigbustours.com\/en\/abu-dhabi\/"]}}}</script>
+<script type="text/x-magento-init">
+{"*":{"Magento_Customer\/js\/customer-data":{"sectionLoadUrl":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/customer\/section\/load\/","cookieLifeTime":"86400","updateSessionUrl":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/customer\/account\/updateSession\/"}}}</script>
+<div class="post-view">
+    <div class="post-holder post-holder-113">
+        <div class="post-content">
+        	<div class="location-wrapper mobile-container">
+			 <div class="row pull-desktop-content">
+				<div class="col-xs-12">
+										 				  </div>
+			 </div>
+			</div>
+            <div class="post-description clearfix">
+                <div class="post-text-hld">
+                    <h2>See one of the most expensive hotels ever built with Big Bus Tours Abu Dhabi</h2>
+<p>When it was finally completed in 2005, the Emirates Palace Hotel was the most expensive hotel ever built. And it shows. This is one of the finest hotels in the world, where luxury and opulence are on show everywhere you look. Marble, gold, precious stones, it&rsquo;s all here. And if you weren&rsquo;t arriving by bus, you could fly in by helipad, or perhaps sail in on a luxury yacht at the private marina.</p>
+<p>The hotel is actually owned by the Abu Dhabi government, which is just as well, as this is where world leaders come to stay when they&rsquo;re in town. The whole top floor has six rulers&rsquo; suites &ndash; they&rsquo;re only offered to the very highest officials who happen to be visiting the Emirates.</p>
+<p><b>A place to relax</b></p>
+<p>Situated on its own private beach, the Emirates Palace Hotel does relaxation very well. There are 2 luxury spas here, as well as 2 swimming pools. Oh, and did we mention the tennis courts, the rugby pitch, the 6-kilometre cycling path&hellip; whatever sport you&rsquo;re into, however you want to relax, this is the place for you.</p>
+<p><b>In the news</b></p>
+<p>The Emirates Palace Hotel likes to be noticed. So there are plenty of events and concerts held here to keep it in the public eye. 15,000 people came here to watch Christina Aguilera perform, for example, and you&rsquo;ve probably seen the hotel interior in a film or two.</p>
+<p><b>Other interesting facts about the Emirates Palace Hotel:</b></p>
+<ul>
+<li>The hotel occupies 850,000 square metres (2,789,000 feet) of floor space</li>
+<li>There&rsquo;s underground parking for 2,500 vehicles</li>
+<li>The Palace Grand Suite costs $11,500 a night</li>
+<li>There&rsquo;s a gold-plated &lsquo;Gold to Go&rsquo; ATM in the hotel&rsquo;s lobby that dispenses 10g gold bars</li>
+</ul>                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="post-bottom">
+            <script type="text/javascript">var addthis_config = {"data_track_clickback":false};</script>
+<script type="text/javascript" async src="//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4def63cd3cf37569"></script>
+<script type="text/javascript">
+    var addthis_config = {
+        ui_language: "en"
+    }
+</script>        </div>
+    </div>
+</div></div><div class="sidebar sidebar-additional"><div class="location-wrapper desktop-container">
+ <div class="row">
+	<div class="col-xs-12">
+						  </div>
+ </div>
+</div>
+
+            <div class="block related">
+        <div class="block-title title">
+            <h2 id="block-relatedposts-heading" role="heading" aria-level="2">
+                Related articles            </h2>
+        </div>
+        <ol class="block-content related-articles row">
+                            <li class="item col-sm-6 col-md-12">
+					<article class="clearfix">
+													<a class="post-item-link" href="https://www.bigbustours.com/en/abu-dhabi/abu-dhabi-landmarks-heritage-village/">
+								<div class="post-img related-article-img col-xs-4">
+									<img src="https://d12dkjq56sjcos.cloudfront.net/pub/media/magefan_blog/a/b/abu-dhabi-landmark-heritage-village-listing-big-bus-tours-dec-2016_1.jpg" alt="Emirates Palace Hotel" />
+								</div>
+														<div class="related-article-content col-xs-12">
+								<h3 class="sub-title">Heritage Village</h3>
+								<p>Hop off our tour to see Heritage Village which recreates the city’s early history & Bedouin lifestyle. Discover traditional Abu Dhabi with Big Bus Tours. </p>
+							</div>
+						</a>
+					</article>
+                </li>
+                            <li class="item col-sm-6 col-md-12">
+					<article class="clearfix">
+													<a class="post-item-link" href="https://www.bigbustours.com/en/abu-dhabi/abu-dhabi-landmarks-yas-island/">
+								<div class="post-img related-article-img col-xs-4">
+									<img src="https://d12dkjq56sjcos.cloudfront.net/pub/media/magefan_blog/a/b/abu-dhabi-landmark-yas-island-listing-big-bus-tours-dec-2016_1.jpg" alt="Emirates Palace Hotel" />
+								</div>
+														<div class="related-article-content col-xs-12">
+								<h3 class="sub-title">Yas Island</h3>
+								<p>Home to Ferrari World, the F1 race track & Yas Waterworld, Yas Island has plenty to keep you entertained. Discover Yas Island on the Big Bus green route. </p>
+							</div>
+						</a>
+					</article>
+                </li>
+                            <li class="item col-sm-6 col-md-12">
+					<article class="clearfix">
+													<a class="post-item-link" href="https://www.bigbustours.com/en/abu-dhabi/abu-dhabi-landmarks-abu-dhabi-mall/">
+								<div class="post-img related-article-img col-xs-4">
+									<img src="https://d12dkjq56sjcos.cloudfront.net/pub/media/magefan_blog/a/b/abu-dhabi-landmark-abu-dhabi-mall-listing-big-bus-tours-dec-2016_1.jpg" alt="Emirates Palace Hotel" />
+								</div>
+														<div class="related-article-content col-xs-12">
+								<h3 class="sub-title">Abu Dhabi Mall</h3>
+								<p>Hop off our open-top bus tour to indulge in some serious shopping at the Abu Dhabi Mall. Learn more about this popular Abu Dhabi attraction at Big Bus Tours. </p>
+							</div>
+						</a>
+					</article>
+                </li>
+                            <li class="item col-sm-6 col-md-12">
+					<article class="clearfix">
+													<a class="post-item-link" href="https://www.bigbustours.com/en/abu-dhabi/abu-dhabi-landmarks-sheikh-zayed-grand-mosque/">
+								<div class="post-img related-article-img col-xs-4">
+									<img src="https://d12dkjq56sjcos.cloudfront.net/pub/media/magefan_blog/a/b/abu-dhabi-landmark-sheikh-zayed-grand-mosque-listing-big-bus-tours-dec-2016_2.jpg" alt="Emirates Palace Hotel" />
+								</div>
+														<div class="related-article-content col-xs-12">
+								<h3 class="sub-title">Sheikh Zayed Grand Mosque</h3>
+								<p>Sheikh Zayed Grand Mosque is one of the most important buildings in the Emirates. Learn more on our website & enjoy the view for real on our Big Bus tour.</p>
+							</div>
+						</a>
+					</article>
+                </li>
+                            <li class="item col-sm-6 col-md-12">
+					<article class="clearfix">
+													<a class="post-item-link" href="https://www.bigbustours.com/en/abu-dhabi/abu-dhabi-landmarks-the-corniche/">
+								<div class="post-img related-article-img col-xs-4">
+									<img src="https://d12dkjq56sjcos.cloudfront.net/pub/media/magefan_blog/a/b/abu-dhabi-landmark-corniche-listing-big-bus-tours-dec-2016_2.jpg" alt="Emirates Palace Hotel" />
+								</div>
+														<div class="related-article-content col-xs-12">
+								<h3 class="sub-title">The Corniche</h3>
+								<p>Take in the exquisite view of Abu Dhabi's most elegant highway - the Corniche. Book your tour today and see more of Abu Dhabi's attractions with Big Bus. </p>
+							</div>
+						</a>
+					</article>
+                </li>
+                    </ol>
+    </div>
+    <div class="tags-wrapper">
+ <div class="row">
+
+	           	  <div class="tag-item"><a href=https://www.bigbustours.com/en/abu-dhabi/abu-dhabi-landmarks/?tag=9 type="submit" class="btn btn-primary bullet-btn text-uppercase" style="background-color: #879067">Landmarks</a></div>
+	 </div>
+</div>
+</div></div></main><footer class="page-footer"><div class="footer content container-fluid"><div class="footer-middle row">
+		<div class="container">
+<div class="row">
+<div class="col-xs-12 col-md-6 text-center col-md-push-3"><div class="block newsletter">
+    <form class="form subscribe"
+        novalidate
+        action="https://www.bigbustours.com/en/abu-dhabi/newsletter/subscriber/new/"
+        method="post"
+        data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+        id="newsletter-validate-detail">
+
+        <p><label class="label" for="newsletter"><span class="footer-newsletter-caption">Join thousands of our passengers</span><span>Sign up to our newsletter for exclusive info and offers</span></label></p>
+		<input name="form_key" type="hidden" value="ci753spuzKLR2rNj" />        <input name="email" type="email" id="newsletter"
+                    placeholder="Enter your email address"
+                    data-validate="{required:true, 'validate-email':true ,'messages':{'required': 'Please enter a valid email address (Ex: johndoe@domain.com).', 'validate-email': 'Please enter a valid email address (Ex: johndoe@domain.com).'}}"/>
+
+        <button class="btn action subscribe primary" title="Sign up" type="submit">Sign up</button>
+    </form>
+</div>
+<div class="first-stop-advn-logo col-md-5 hidden-xs hidden-sm"><img src="https://d12dkjq56sjcos.cloudfront.net/pub/media/wysiwyg/BBT-First-Stop-Adventure-WHITE-YELLOW.png" alt="First Stop Adventure" class="small" /></div></div>
+<div class="col-xs-6 col-md-3 text-center col-md-pull-6">
+<ul class="footer-menu bbt-menu">
+<li><strong>Big Bus Tours</strong></li>
+<li><a href="https://www.bigbustours.com/en/abu-dhabi/about-big-bus-tours/" >About Big Bus Tours</a></li>
+<li><a href="https://www.bigbustours.com/en/abu-dhabi/careers/" >Careers</a></li>
+<li><a href="https://www.bigbustours.com/en/abu-dhabi/private-hires/" >Private Hires &amp; Charters</a></li>
+<li><a href="https://www.bigbustours.com/en/abu-dhabi/press-enquiries/" >Press Enquiries</a></li>
+<li><a href="https://www.bigbustours.com/en/abu-dhabi/affiliate-programme/" >Affiliates</a></li>
+</ul>
+</div>
+<div class="col-xs-6 col-md-3 text-center">
+<ul class="footer-menu customer-service-menu">
+<li><strong>Customer Services</strong></li>
+<li><a href="https://www.bigbustours.com/en/abu-dhabi/on-the-day/" >On the Day</a></li>
+<li><a href="https://www.bigbustours.com/en/abu-dhabi/service-information/" >Service Information</a></li>
+<li><a href="https://www.bigbustours.com/en/abu-dhabi/help/" >Help</a></li>
+<li><a href="https://www.bigbustours.com/en/abu-dhabi/contact-us/" >Contact Us</a></li>
+</ul>
+<a class="btn btn-with-logo hidden-xs hidden-sm" href="https://eng.bigbustours.com/abudhabi/AP_Login.aspx"><img src="https://d12dkjq56sjcos.cloudfront.net/pub/media/wysiwyg/logo-for-btn.png" alt="BBT Logo" /> Agent Login</a></div>
+<div class="col-xs-12 col-sm-6 col-sm-offset-3 visible-xs visible-sm"><a class="btn btn-with-logo" href="https://eng.bigbustours.com/abudhabi/AP_Login.aspx"><img src="https://d12dkjq56sjcos.cloudfront.net/pub/media/wysiwyg/logo-for-btn.png" alt="BBT Logo" /> Agent Login</a><div class="first-stop-advn-logo col-xs-9 visible-xs visible-sm"><img class="small" src="https://d12dkjq56sjcos.cloudfront.net/pub/media/wysiwyg/BBT-First-Stop-Adventure-WHITE-YELLOW.png" alt="First Stop Adventure" /></div></div>
+</div>
+</div>
+<!--
+NEW
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-md-6 text-center col-md-push-3">{{block class="Magento\Newsletter\Block\Subscribe" name="newsletter-subscribe-content" template="Magento_Newsletter::subscribe.phtml"}}</div>
+<div class="col-xs-6 col-md-3 text-center col-md-pull-6">
+<ul class="footer-menu bbt-menu">
+<li><strong>Big Bus Tours</strong></li>
+<li><a href="{{config path="web/unsecure/base_url"}}about-big-bus-tours">About Big Bus Tours</a></li>
+<li><a href="{{config path="web/unsecure/base_url"}}private-hires">Private Hires</a></li>
+<li><a href="{{config path="web/unsecure/base_url"}}les-cars-rouges">Les Cars Rouges</a></li>
+<li><a href="{{config path="web/unsecure/base_url"}}press-enquiries">Press Enquiries</a></li>
+<li><a href="{{config path="web/unsecure/base_url"}}affiliate-program">Affiliates</a></li>
+</ul>
+</div>
+<div class="col-xs-6 col-md-3 text-center">
+<ul class="footer-menu customer-service-menu">
+<li><strong>Customer Services</strong></li>
+<li><a href="{{config path="web/unsecure/base_url"}}on-the-day">On the day</a></li>
+<li><a href="{{config path="web/unsecure/base_url"}}help">Help</a></li>
+<li><a href="{{config path="web/unsecure/base_url"}}service-information">Find Us</a></li>
+<li><a href="{{config path="web/unsecure/base_url"}}contact-us">Contact Us</a></li>
+</ul>
+<a class="btn btn-with-logo hidden-xs hidden-sm" href="https://eng.bigbustours.com/paris/AP_Login.aspx"><img src="{{media url="wysiwyg/logo-for-btn.png"}}" alt="BBT Logo" /> Agent Login</a>
+</div>
+<div class="col-xs-12 col-sm-6 col-sm-offset-3 visible-xs visible-sm"><a class="btn btn-with-logo" href="https://eng.bigbustours.com/paris/AP_Login.aspx"><img src="{{media url="wysiwyg/logo-for-btn.png"}}" alt="BBT Logo" /> Agent Login</a></div>
+</div>
+</div> -->
+</div><div class="footer-bottom row">
+		<div class="container">
+<div class="row">
+<div class="col-xs-12 col-md-3 col-lg-2 col-lg-offset-1"><a class="fb-link" href="https://www.facebook.com/BigBusTours/" target="_blank"><img src="https://d12dkjq56sjcos.cloudfront.net/pub/media/wysiwyg/fb-icon.png" alt="Facebook" /> Find us on Facebook</a></div>
+<div class="col-xs-12 col-md-5">
+<ul class="footer-menu">
+<li><a href="https://www.bigbustours.com/en/abu-dhabi/terms-and-conditions/" >Terms &amp; Conditions</a></li>
+<li><a href="https://www.bigbustours.com/en/abu-dhabi/privacy-policy/" >Privacy Policy</a></li>
+<li><a href="https://www.bigbustours.com/en/abu-dhabi/cookie-policy/" >Cookies</a></li>
+<li><a href="https://www.bigbustours.com/en/abu-dhabi/modern-slavery-policy/">Modern Slavery</a></li>
+<li><a href="https://www.bigbustours.com/en/abu-dhabi/gender-pay-gap-report/">Gender Pay Gap</a></li>
+<li><small class="copyright">
+    <span>© 2018 Big Bus Tours Ltd</span>
+</small>
+</li>
+</ul>
+</div>
+<div class="col-xs-12 col-md-4">
+<ul class="list-inline footer-menu payments-menu">
+<li><img class="small" src="https://d12dkjq56sjcos.cloudfront.net/pub/media/wysiwyg/payment-visa.png" alt="Visa" /></li>
+<li><img class="small" src="https://d12dkjq56sjcos.cloudfront.net/pub/media/wysiwyg/payment-master-card.png" alt="Master Card" /></li>
+<li><img class="small" src="https://d12dkjq56sjcos.cloudfront.net/pub/media/wysiwyg/payment-am-expr.png" alt="American Express" /></li>
+<li><img class="small" src="https://d12dkjq56sjcos.cloudfront.net/pub/media/wysiwyg/payment-paypal.png" alt="Paypal" /></li>
+<li><img class="small" src="https://d12dkjq56sjcos.cloudfront.net/pub/media/wysiwyg/payment-quovadis.png" alt="Quovadis" /></li>
+</ul>
+</div>
+</div>
+</div></div></div>    <div class="tours-tickets-container quick-buy-tickets-pop" data-role="quick-buy-tickets-block">
+        <div class="quick-buy-tickets-inner">
+            <div class="container">
+                <span class="quick-buy-tickets-close text-center" aria-hidden="true" id="quick-buy-tickets-close"></span>
+                <h2 class="tours-tickets-title text-center">1. Select your ticket                                    </h2>
+                <div class="tour-tickets-carousel tickets-data-populate clearfix text-center">
+                                            <div class="tickets-lists">
+                            <div class="inner">
+                                <div class="image" style="background:url('https://d12dkjq56sjcos.cloudfront.net/pub/media/catalog/product/cache/10f519365b01716ddb90abc57de5a837/a/b/abu-dhabi-classic-ticket-quick-buy-big-bus-tours.jpg') no-repeat;background-size: cover;"></div>
+                                                                <div class="inner-content">
+                                  <h3 class="title" style=background-color:#8c7853>
+                                      Classic Ticket                                  </h3>
+                                  <table class="details">
+                                      <tr>
+                                          <td valign="top">
+                                                                                            <input type="hidden" name="form_action" value="https://www.bigbustours.com/en/abu-dhabi/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9jaGVja291dC9jYXJ0Lw%2C%2C/product/5916/">
+                                              <div class="in-ex-cludes text-left">
+                                                                                                            <ul class="includes">
+                                                                                                                                <li>1 Day hop on, hop off<i class="fa fa-check" aria-hidden="true"></i></li>
+                                                                                                                                <li>2 different routes<i class="fa fa-check" aria-hidden="true"></i></li>
+                                                                                                                        </ul>
+                                                                                                    </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td valign="bottom">
+                                              <div class="ticket-price">
+                                                  <div class="price-row">
+                                                                                                                <div class="price-colmn">
+                                                              <div class="adult"
+                                                                   data-id="5915"
+                                                                   data-price="68.60"
+                                                                   data-sales-price="68.60"
+                                                                   data-msrp="76.20"
+                                                                   data-name="Classic Ticket - Adult"
+                                                                   data-label="Adult"
+                                                                   data-parentid="5916"
+                                                                   data-age-variants-label="">
+                                                                  <span class="list-item-age">Adult&#58;</span><br>
+                                                                  <span class="list-item-price">
+                                                                                                                                            <span class="normal-price"><span class="price">US$68.60</span></span>
+                                                                        <br>On-street&#58;<br>
+                                                                        <span class="price-line-through"><span class="price">US$76.20</span></span>
+                                                                                                                                  </span>
+                                                              </div>
+                                                          </div>
+                                                                                                                <div class="price-colmn">
+                                                              <div class="child"
+                                                                   data-id="5913"
+                                                                   data-price="46.30"
+                                                                   data-sales-price="46.30"
+                                                                   data-msrp="51.40"
+                                                                   data-name="Classic Ticket - Child"
+                                                                   data-label="Child"
+                                                                   data-parentid="5916"
+                                                                   data-age-variants-label="5-15 years">
+                                                                  <span class="list-item-age">Child&#58;</span><br>
+                                                                  <span class="list-item-price">
+                                                                                                                                            <span class="normal-price"><span class="price">US$46.30</span></span>
+                                                                        <br>On-street&#58;<br>
+                                                                        <span class="price-line-through"><span class="price">US$51.50</span></span>
+                                                                                                                                  </span>
+                                                              </div>
+                                                          </div>
+                                                                                                        </div>
+                                                  <p class="tour-tickets-read-more"><a href="https://www.bigbustours.com/en/abu-dhabi/classic-abu-dhabi-tour-ticket/" title="Classic Ticket">More Info<i class="fa fa-angle-right"></i></a></p>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                            </div>
+                        </div>
+                                            <div class="tickets-lists">
+                            <div class="inner">
+                                <div class="image" style="background:url('https://d12dkjq56sjcos.cloudfront.net/pub/media/catalog/product/cache/10f519365b01716ddb90abc57de5a837/a/b/abu-dhabi-premium-ticket-quick-buy-big-bus-tours.jpg') no-repeat;background-size: cover;"></div>
+                                                                <div class="inner-content">
+                                  <h3 class="title" style=background-color:#a0aabf>
+                                      Premium Ticket                                  </h3>
+                                  <table class="details">
+                                      <tr>
+                                          <td valign="top">
+                                                                                            <input type="hidden" name="form_action" value="https://www.bigbustours.com/en/abu-dhabi/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9jaGVja291dC9jYXJ0Lw%2C%2C/product/6077/">
+                                              <div class="in-ex-cludes text-left">
+                                                                                                            <ul class="includes">
+                                                                                                                                <li>2 Day hop on, hop off<i class="fa fa-check" aria-hidden="true"></i></li>
+                                                                                                                                <li>2 different routes<i class="fa fa-check" aria-hidden="true"></i></li>
+                                                                                                                        </ul>
+                                                                                                    </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td valign="bottom">
+                                              <div class="ticket-price">
+                                                  <div class="price-row">
+                                                                                                                <div class="price-colmn">
+                                                              <div class="adult"
+                                                                   data-id="6075"
+                                                                   data-price="79.60"
+                                                                   data-sales-price="79.60"
+                                                                   data-msrp="88.50"
+                                                                   data-name="Premium Ticket - Adult"
+                                                                   data-label="Adult"
+                                                                   data-parentid="6077"
+                                                                   data-age-variants-label="">
+                                                                  <span class="list-item-age">Adult&#58;</span><br>
+                                                                  <span class="list-item-price">
+                                                                                                                                            <span class="normal-price"><span class="price">US$79.60</span></span>
+                                                                        <br>On-street&#58;<br>
+                                                                        <span class="price-line-through"><span class="price">US$88.50</span></span>
+                                                                                                                                  </span>
+                                                              </div>
+                                                          </div>
+                                                                                                                <div class="price-colmn">
+                                                              <div class="child"
+                                                                   data-id="6076"
+                                                                   data-price="53.70"
+                                                                   data-sales-price="53.70"
+                                                                   data-msrp="59.60"
+                                                                   data-name="Premium Ticket - Child"
+                                                                   data-label="Child"
+                                                                   data-parentid="6077"
+                                                                   data-age-variants-label="5-15 years">
+                                                                  <span class="list-item-age">Child&#58;</span><br>
+                                                                  <span class="list-item-price">
+                                                                                                                                            <span class="normal-price"><span class="price">US$53.70</span></span>
+                                                                        <br>On-street&#58;<br>
+                                                                        <span class="price-line-through"><span class="price">US$59.60</span></span>
+                                                                                                                                  </span>
+                                                              </div>
+                                                          </div>
+                                                                                                        </div>
+                                                  <p class="tour-tickets-read-more"><a href="https://www.bigbustours.com/en/abu-dhabi/premium-abu-dhabi-tour-ticket/" title="Premium Ticket">More Info<i class="fa fa-angle-right"></i></a></p>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                            </div>
+                        </div>
+                                            <div class="tickets-lists">
+                            <div class="inner">
+                                <div class="image" style="background:url('https://d12dkjq56sjcos.cloudfront.net/pub/media/catalog/product/cache/10f519365b01716ddb90abc57de5a837/a/b/abu-dhabi-deluxe-ticket-quick-buy-big-bus-tours.jpg') no-repeat;background-size: cover;"></div>
+                                                                <div class="inner-content">
+                                  <h3 class="title" style=background-color:#cfb53c>
+                                      Deluxe Ticket                                  </h3>
+                                  <table class="details">
+                                      <tr>
+                                          <td valign="top">
+                                                                                            <input type="hidden" name="form_action" value="https://www.bigbustours.com/en/abu-dhabi/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9jaGVja291dC9jYXJ0Lw%2C%2C/product/5999/">
+                                              <div class="in-ex-cludes text-left">
+                                                                                                            <ul class="includes">
+                                                                                                                                <li>3 Day hop on, hop off<i class="fa fa-check" aria-hidden="true"></i></li>
+                                                                                                                                <li>2 different routes<i class="fa fa-check" aria-hidden="true"></i></li>
+                                                                                                                                <li>City Pass for 20+ Attractions<i class="fa fa-check" aria-hidden="true"></i></li>
+                                                                                                                        </ul>
+                                                                                                    </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td valign="bottom">
+                                              <div class="ticket-price">
+                                                  <div class="price-row">
+                                                                                                                <div class="price-colmn">
+                                                              <div class="adult"
+                                                                   data-id="5998"
+                                                                   data-price="95.50"
+                                                                   data-sales-price="95.50"
+                                                                   data-msrp="106.20"
+                                                                   data-name="Deluxe Ticket - Adult"
+                                                                   data-label="Adult"
+                                                                   data-parentid="5999"
+                                                                   data-age-variants-label="">
+                                                                  <span class="list-item-age">Adult&#58;</span><br>
+                                                                  <span class="list-item-price">
+                                                                                                                                            <span class="normal-price"><span class="price">US$95.50</span></span>
+                                                                        <br>On-street&#58;<br>
+                                                                        <span class="price-line-through"><span class="price">US$106.20</span></span>
+                                                                                                                                  </span>
+                                                              </div>
+                                                          </div>
+                                                                                                                <div class="price-colmn">
+                                                              <div class="child"
+                                                                   data-id="5997"
+                                                                   data-price="61.20"
+                                                                   data-sales-price="61.20"
+                                                                   data-msrp="68.10"
+                                                                   data-name="Deluxe Ticket - Child"
+                                                                   data-label="Child"
+                                                                   data-parentid="5999"
+                                                                   data-age-variants-label="5-15 years">
+                                                                  <span class="list-item-age">Child&#58;</span><br>
+                                                                  <span class="list-item-price">
+                                                                                                                                            <span class="normal-price"><span class="price">US$61.20</span></span>
+                                                                        <br>On-street&#58;<br>
+                                                                        <span class="price-line-through"><span class="price">US$68.10</span></span>
+                                                                                                                                  </span>
+                                                              </div>
+                                                          </div>
+                                                                                                        </div>
+                                                  <p class="tour-tickets-read-more"><a href="https://www.bigbustours.com/en/abu-dhabi/deluxe-abu-dhabi-tour-ticket/" title="Deluxe Ticket">More Info<i class="fa fa-angle-right"></i></a></p>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                            </div>
+                        </div>
+                                            <div class="tickets-lists">
+                            <div class="inner">
+                                <div class="image" style="background:url('https://d12dkjq56sjcos.cloudfront.net/pub/media/catalog/product/cache/10f519365b01716ddb90abc57de5a837/a/b/abu-dhabi_dubai-package-ticket-quick-buy-big-bus-tours.jpg') no-repeat;background-size: cover;"></div>
+                                                                <div class="inner-content">
+                                  <h3 class="title" style=background-color:#5b399a>
+                                      Abu Dhabi &amp; Dubai Tour Package                                  </h3>
+                                  <table class="details">
+                                      <tr>
+                                          <td valign="top">
+                                                                                            <input type="hidden" name="form_action" value="https://www.bigbustours.com/en/abu-dhabi/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9jaGVja291dC9jYXJ0Lw%2C%2C/product/4199/">
+                                              <div class="in-ex-cludes text-left">
+                                                                                                            <ul class="includes">
+                                                                                                                                <li>Abu Dhabi Classic Ticket<i class="fa fa-check" aria-hidden="true"></i></li>
+                                                                                                                                <li>Dubai Classic Ticket <i class="fa fa-check" aria-hidden="true"></i></li>
+                                                                                                                                <li>See all the top landmarks<i class="fa fa-check" aria-hidden="true"></i></li>
+                                                                                                                        </ul>
+                                                                                                    </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td valign="bottom">
+                                              <div class="ticket-price">
+                                                  <div class="price-row">
+                                                                                                                <div class="price-colmn">
+                                                              <div class="adult"
+                                                                   data-id="4200"
+                                                                   data-price="131.50"
+                                                                   data-sales-price="131.50"
+                                                                   data-msrp="131.50"
+                                                                   data-name="Abu Dhabi & Dubai Tour Package"
+                                                                   data-label="Adult"
+                                                                   data-parentid="4199"
+                                                                   data-age-variants-label="">
+                                                                  <span class="list-item-age">Adult&#58;</span><br>
+                                                                  <span class="list-item-price">
+                                                                    <span class="price">US$131.50</span>                                                              </span>
+                                                              </div>
+                                                          </div>
+                                                                                                                <div class="price-colmn">
+                                                              <div class="child"
+                                                                   data-id="4201"
+                                                                   data-price="85.50"
+                                                                   data-sales-price="85.50"
+                                                                   data-msrp="85.50"
+                                                                   data-name="Abu Dhabi & Dubai Tour Package"
+                                                                   data-label="Child"
+                                                                   data-parentid="4199"
+                                                                   data-age-variants-label="5-15 years">
+                                                                  <span class="list-item-age">Child&#58;</span><br>
+                                                                  <span class="list-item-price">
+                                                                    <span class="price">US$85.50</span>                                                              </span>
+                                                              </div>
+                                                          </div>
+                                                                                                        </div>
+                                                  <p class="tour-tickets-read-more"><a href="https://www.bigbustours.com/en/abu-dhabi/abu-dhabi-and-dubai-tour-package/" title="Abu Dhabi &amp; Dubai Tour Package">More Info<i class="fa fa-angle-right"></i></a></p>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                            </div>
+                        </div>
+                                            <div class="tickets-lists">
+                            <div class="inner">
+                                <div class="image" style="background:url('https://d12dkjq56sjcos.cloudfront.net/pub/media/catalog/product/cache/10f519365b01716ddb90abc57de5a837/a/b/abu-dhabi-al-ain-panoramic-guided-tour-ticket-quick-buy-big-bus-tours.jpg') no-repeat;background-size: cover;"></div>
+                                                                <div class="inner-content">
+                                  <h3 class="title" style=background-color:#5b399a>
+                                      Al Ain Panoramic Guided Tour                                  </h3>
+                                  <table class="details">
+                                      <tr>
+                                          <td valign="top">
+                                                                                            <input type="hidden" name="form_action" value="https://www.bigbustours.com/en/abu-dhabi/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9jaGVja291dC9jYXJ0Lw%2C%2C/product/2363/">
+                                              <div class="in-ex-cludes text-left">
+                                                                                                            <ul class="includes">
+                                                                                                                                <li>Panoramic Tour of Al Ain<i class="fa fa-check" aria-hidden="true"></i></li>
+                                                                                                                                <li>Free Rewards Voucher Booklet<i class="fa fa-check" aria-hidden="true"></i></li>
+                                                                                                                                <li>Guided Tour<i class="fa fa-check" aria-hidden="true"></i></li>
+                                                                                                                                <li>Return shuttle<i class="fa fa-check" aria-hidden="true"></i></li>
+                                                                                                                        </ul>
+                                                                                                    </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td valign="bottom">
+                                              <div class="ticket-price">
+                                                  <div class="price-row">
+                                                                                                                <div class="price-colmn">
+                                                              <div class="adult"
+                                                                   data-id="2364"
+                                                                   data-price="74.30"
+                                                                   data-sales-price="74.30"
+                                                                   data-msrp="74.30"
+                                                                   data-name="Al Ain Panoramic Guided Tour"
+                                                                   data-label="Adult"
+                                                                   data-parentid="2363"
+                                                                   data-age-variants-label="">
+                                                                  <span class="list-item-age">Adult&#58;</span><br>
+                                                                  <span class="list-item-price">
+                                                                    <span class="price">US$74.30</span>                                                              </span>
+                                                              </div>
+                                                          </div>
+                                                                                                                <div class="price-colmn">
+                                                              <div class="child"
+                                                                   data-id="2365"
+                                                                   data-price="37.30"
+                                                                   data-sales-price="37.30"
+                                                                   data-msrp="37.30"
+                                                                   data-name="Al Ain Panoramic Guided Tour"
+                                                                   data-label="Child"
+                                                                   data-parentid="2363"
+                                                                   data-age-variants-label="5-15 years">
+                                                                  <span class="list-item-age">Child&#58;</span><br>
+                                                                  <span class="list-item-price">
+                                                                    <span class="price">US$37.30</span>                                                              </span>
+                                                              </div>
+                                                          </div>
+                                                                                                        </div>
+                                                  <p class="tour-tickets-read-more"><a href="https://www.bigbustours.com/en/abu-dhabi/catalog/product/view/id/2363/s/al-ain-tour-ticket-abu-dhabi/" title="Al Ain Panoramic Guided Tour">More Info<i class="fa fa-angle-right"></i></a></p>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                            </div>
+                        </div>
+                                    </div>
+                <div class="product-filter-container">
+                    <div class="row options">
+                        <div class="product-add-form">
+                            <form data-role="tickets-tocart-form" action="" method="post" id="quickbuy-addto-cart-form">
+                                <div class="col-xs-12 col-md-4 person-number-container">
+                                    <h2 class="tours-tickets-title text-center">2. Select quantity</h2>
+                                    <div class="controls-group">
+                                        <div class="col-xs-12 col-md-6 col-lg-4">
+                                            <div class="row adult">
+                                                <div class="col-xs-6 col-md-12">
+                                                    <label for="" class="numeric-control-label">Adult</label>
+                                                </div>
+                                                <div class="col-xs-6 col-md-12">
+                                                    <div class="numeric-control ">
+                                                        <span class="minus controls">-</span>
+                                                        <input type="text" class="form-control input-text product-quantity validate-number quantity-input-cookie" name="super_group[]"
+                                                               value="0" id=""
+                                                               maxlength="12"
+                                                               title="Qty"
+                                                               data-agetype="Adult"
+                                                               data-price=""
+                                                               data-sales-price=""
+                                                               data-msrp=""
+                                                               data-name=""
+                                                               data-label="Adult"
+                                                               data-parentid=""
+                                                               data-validate="{'validate-grouped-qty':'#quickbuy-addto-cart-form'}"
+                                                               data-errors-message-box="#validation-message-box">
+                                                        <span class="plus controls">+</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-6 col-lg-4">
+                                            <div class="row child">
+                                                <div class="col-xs-6 col-md-12">
+                                                    <label for="" class="numeric-control-label">Child<span>&nbsp;</span></label>
+                                                </div>
+                                                <div class="col-xs-6 col-md-12">
+                                                    <div class="numeric-control ">
+                                                        <span class="minus controls">-</span>
+                                                        <input type="text" class="form-control input-text product-quantity validate-number quantity-input-cookie" name=""
+                                                               value="0"
+                                                               id=""
+                                                               maxlength="12"
+                                                               title="Qty"
+                                                               data-agetype="Child"
+                                                               data-price=""
+                                                               data-sales-price=""
+                                                               data-msrp=""
+                                                               data-name=""
+                                                               data-label="Child"
+                                                               data-parentid=""
+                                                               data-validate="{'validate-grouped-qty':'#quickbuy-addto-cart-form'}"
+                                                               data-errors-message-box="#validation-message-box">
+                                                        <span class="plus controls">+</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-6 col-lg-4">
+                                            <div class="row family">
+                                                <div class="col-xs-6 col-md-12">
+                                                    <label for="" class="numeric-control-label">Family<span>&nbsp;</span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-6 col-md-12">
+                                                    <div class="numeric-control ">
+                                                        <span class="minus controls">-</span>
+                                                        <input type="text" class="form-control input-text product-quantity validate-number quantity-input-cookie" name="super_group[]"
+                                                               value="0"
+                                                               id=""
+                                                               maxlength="12"
+                                                               title="Qty"
+                                                               data-agetype="Family"
+                                                               data-price=""
+                                                               data-sales-price=""
+                                                               data-msrp=""
+                                                               data-name=""
+                                                               data-label="Family"
+                                                               data-parentid=""
+                                                               data-validate="{'validate-grouped-qty':'#quickbuy-addto-cart-form'}"
+                                                               data-errors-message-box="#validation-message-box">
+                                                        <span class="plus controls">+</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="quantity-error col-xs-12">
+                                        <p class="main-error-msg"></p>
+                                        <p class="group-error-msg">Please <a href="https://www.bigbustours.com/en/abu-dhabi/contact-us/">contact us</a> to arrange a group booking.</p>
+                                    </div>
+                                </div>
+                                <div id="validation-message-box"></div>
+                                <input name="form_key" type="hidden" value="ci753spuzKLR2rNj" />                                <input type="hidden" name="show_success_msg" value="0">
+                            </form>
+                        </div>
+                        <div class="col-xs-12 col-md-3 add-to-cart-total-container text-center">
+                            <div class="items-total">
+                                <div class="inner">
+                                    <p class="old-price price-line-through" style="display: none;"><strong>US$<span id="old-price-value"></span></strong></p>
+                                    <label>Total&#58;</label>
+                                    US$<span id="sum-total">0.00</span>
+                                    <p class="on-street-price-saved" style="display: none">
+                                        <span class="on-street-price">On-street&nbsp;<span class="price"></span>,</span>
+                                        <span class="save-price">save&nbsp;<span class="price"></span></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="button-container">
+                                <button type="button" id="product-addtocart-button" class="btn filter-items btn-primary action tocart">Buy Now</button>
+                            </div>
+                            <p class="days-info">Use any day within 6 months</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/x-magento-init">
+        {"[data-role=quick-buy-tickets-block]": {"Magento_Ui/js/core/app": {"components":{"quickBuy":{"component":"Born_Custom\/js\/view\/quick-buy"},"sortOrder":"500"}}}}
+    </script>    
+<script type="text/javascript">
+    require([
+        "js/bbt.products"
+    ], function(BBT)
+    {
+        BBT.ProductHelper.quickBuyHandler.cloneQBElements();
+    });
+</script><div class="search-overlay-container" data-auto-open="true">
+    <i class="fa fa-times close-overlay-search" aria-hidden="true"></i>
+    <div class="search-overlay-content">
+        <input type="text" id="search-city-overlay" autofocus name="search-city-overlay" placeholder="Search for a city"/>
+       <input type="hidden" id="bbt-cities" value='[["London","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/london\\\/london-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"london_en\",\"___from_store\":\"abudhabi_en\"}}"],["Paris","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/paris\\\/paris-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"paris_en\",\"___from_store\":\"abudhabi_en\"}}"],["Budapest","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/budapest\\\/budapest-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"budapest_en\",\"___from_store\":\"abudhabi_en\"}}"],["Dubai","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/dubai\\\/dubai-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"dubai_en\",\"___from_store\":\"abudhabi_en\"}}"],["Muscat","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/muscat\\\/muscat-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"muscat_en\",\"___from_store\":\"abudhabi_en\"}}"],["New York","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/new-york\\\/new-york-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"newyork_en\",\"___from_store\":\"abudhabi_en\"}}"],["Chicago","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/chicago\\\/chicago-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"chicago_en\",\"___from_store\":\"abudhabi_en\"}}"],["Las Vegas","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/las-vegas\\\/las-vegas-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"lasvegas_en\",\"___from_store\":\"abudhabi_en\"}}"],["Miami","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/miami\\\/miami-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"miami_en\",\"___from_store\":\"abudhabi_en\"}}"],["Philadelphia","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/philadelphia\\\/philadelphia-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"philadelphia_en\",\"___from_store\":\"abudhabi_en\"}}"],["San Francisco","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/san-francisco\\\/san-francisco-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"sanfrancisco_en\",\"___from_store\":\"abudhabi_en\"}}"],["Sydney","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/sydney\\\/sydney-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"sydney_en\",\"___from_store\":\"abudhabi_en\"}}"],["Vienna","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/vienna\\\/vienna-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"vienna_en\",\"___from_store\":\"abudhabi_en\"}}"],["Washington DC","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/washington-dc\\\/washington-dc-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"washingtondc_en\",\"___from_store\":\"abudhabi_en\"}}"],["Rome","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/rome\\\/rome-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"rome_en\",\"___from_store\":\"abudhabi_en\"}}"],["Istanbul","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/istanbul\\\/istanbul-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"istanbul_en\",\"___from_store\":\"abudhabi_en\"}}"],["Hong Kong","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/hong-kong\\\/hong-kong-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"hongkong_en\",\"___from_store\":\"abudhabi_en\"}}"],["Darwin","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/darwin\\\/darwin-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"darwin_en\",\"___from_store\":\"abudhabi_en\"}}"],["Dublin","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/dublin\\\/dublin-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"dublin_en\",\"___from_store\":\"abudhabi_en\"}}"],["Singapore","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/singapore\\\/singapore-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"singapore_en\",\"___from_store\":\"abudhabi_en\"}}"],["Los Angeles","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/los-angeles\\\/los-angeles-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"los_angeles_en\",\"___from_store\":\"abudhabi_en\"}}"],["Berlin","{\"action\":\"https:\\\/\\\/www.bigbustours.com\\\/en\\\/berlin\\\/berlin-bus-tours\\\/\",\"data\":{\"uenc\":\"aHR0cHM6Ly93d3cuYmlnYnVzdG91cnMuY29tL2VuL2FidS1kaGFiaS9hYnUtZGhhYmktbGFuZG1hcmtzLWVtaXJhdGVzLXBhbGFjZS1ob3RlbC8\\\/X19fc3RvcmU9YWJ1ZGhhYmlfZW4mX19fZnJvbV9zdG9yZT1hYnVkaGFiaV9lbg==\",\"___store\":\"berlin_en\",\"___from_store\":\"abudhabi_en\"}}"]]'/> 
+    </div>
+</div>
+<script type="text/javascript">
+	require([
+	    'js/bbt.common',
+		'js/bbt.citySelector',
+	    'js/bbt.header',
+	    'js/bbt.components',
+	    'js/bbt.video',
+	    'js/bbt.geoipPopup',
+	    'js/bbt.validation'
+	], function(BBT)
+	{
+		'use strict';
+
+		BBT.Common.init();
+		BBT.Header.init();
+		BBT.Components.init();
+		BBT.Video.init();
+		//BBT.GeoIp.init();
+		BBT.CitySelector.init(".logo-container .fa, #search-city");
+		BBT.Validation.cartButton.init();
+		BBT.Common.showPage();
+		BBT.Common.scrollTop.init();
+		BBT.ProductHelper.init();
+	});
+</script>
+<script type="text/javascript">
+    require([
+        "jquery",
+        'Magento_Customer/js/customer-data',
+        'js/bbt.common'
+    ], function ($, customerData, BBT) {
+        $(window).load(function(){
+            var isOrderComplete = '0';
+            if (isOrderComplete == 1 && $('body').hasClass('cms-page-view')) {
+                var sections = ['cart'];
+                customerData.invalidate(sections);
+            }
+            BBT.Common.triggerCurrencyClick();
+        });
+
+    });
+</script>
+<script src="//rum-static.pingdom.net/pa-5bbd152a7e84eb0016000224.js" async></script>
+</footer><script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "storage-manager": {
+                            "component": "Magento_Catalog/js/storage-manager",
+                            "appendTo": "",
+                            "storagesConfiguration" :
+                                         {"recently_viewed_product":{"requestConfig":{"syncUrl":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/catalog\/product\/frontend_action_synchronize\/"},"lifetime":"1000","allowToSendRequest":null},"recently_compared_product":{"requestConfig":{"syncUrl":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/catalog\/product\/frontend_action_synchronize\/"},"lifetime":"1000","allowToSendRequest":null},"product_data_storage":{"updateRequestConfig":{"url":"https:\/\/www.bigbustours.com\/en\/abu-dhabi\/rest\/abudhabi_en\/V1\/products-render-info"},"allowToSendRequest":null}}                        }
+                    }
+                }
+            }
+        }
+</script>
+
+
+<!-- Conversant Script -->
+<!-- dtm_fid should be different for cities -->
+<script type="text/javascript" src="https://login.dotomi.com/profile/visit/js/1_0?dtm_cid=63170&dtm_cmagic=4d88df&dtm_fid=1653&cachebuster=[POPULATE_CACHEBUSTER_HERE]"></script>    <noscript>
+        <div class="message global noscript">
+            <div class="content">
+                <p>
+                    <strong>JavaScript seems to be disabled in your browser.</strong>
+                    <span>For the best experience on our site, be sure to turn on Javascript in your browser.</span>
+                </p>
+            </div>
+        </div>
+    </noscript>
+            <!-- GOOGLE TAG MANAGER -->
+            <noscript>
+                <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNQPVV" height="0" width="0"
+                        style="display:none;visibility:hidden"></iframe>
+            </noscript>
+            <script type="text/x-magento-init">
+            {
+                "*": {
+                    "Magento_GoogleTagManager/js/google-tag-manager": {
+                        "isCookieRestrictionModeEnabled": 0,
+                        "currentWebsite": 1,
+                        "cookieName": "user_allowed_save_cookie",
+                        "gtmAccountId": "GTM-KNQPVV",
+                        "storeCurrencyCode": "USD",
+                        "ordersData": []                    }
+                }
+            }
+            </script>
+            <!-- END GOOGLE TAG MANAGER -->
+        </div>    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b1db1d04f9","applicationID":"31940482","transactionName":"MlxVYENQCkEHVERQDgsWdldFWAtcSVVcVgZKSVhHRR4SWwNA","queueTime":0,"applicationTime":1484,"atts":"HhtWFgtKGU8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

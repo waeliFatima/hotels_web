@@ -1,0 +1,97 @@
+<?php
+require_once '../config.php';
+if (isset($_SESSION['user_email'])) {
+$email = $_SESSION['user_email'];
+$getid = mysqli_query($con, "SET NAMES utf8");
+$getid = mysqli_query($con, "SET CHARACTER SET utf8");
+$getid = mysqli_query($con, "SELECT `id_user` FROM `users` WHERE `email`='$email'");
+while ($row = mysqli_fetch_array($getid)) {
+    $id = $row['id_user'];
+}
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <title>Hotel</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+          integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ'
+          crossorigin='anonymous'>
+    <!--    <link rel="stylesheet" href="hotels/style/style.css">-->
+</head>
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+
+<body style="background-color: #f2f0fb" dir="rtl">
+
+<div style="margin:80px"></div>
+<div
+    style="width: 1140px;margin: auto;padding: 20px;background-color: white;font-size: 19px;color: #c6c0c9;text-align: center"
+    dir="rtl">
+    <a href="account.php" style="text-decoration: none"><span class="fa fa-user "></span> حساب کاربری</a><span
+        style="margin: 20px">|</span>
+    <a style="text-decoration: none"><span class="fa fa-star "></span> امتیاز ها</a><span
+        style="margin: 20px">|</span>
+    <a style="text-decoration: none"><span class="fa fa-behance "></span> سفارشات و استرادات</a><span
+        style="margin: 20px">|</span>
+    <a href="comment.php" style="text-decoration: none"><span class="glyphicon glyphicon-envelope "></span> ثبت نظر
+    </a><span
+        style="margin: 20px">|</span>
+    <a href="mypassengers.php" style="text-decoration: none"><span class="fa fa-list "></span> لیست مسافران
+    </a><span
+        style="margin: 20px">|</span>
+    <a href="cridet.php" style="text-decoration: none"><span class="fa fa-credit-card "></span> افزایش اعتبار</a>
+</div>
+<div style="margin:90px"></div>
+
+    <div style="margin:30px"></div>
+
+    <div style="width: 1140px;margin: auto;padding: 20px;background-color: white;font-size: 18px;color: #68626b;text-align: center;height: 200px ">
+        <div style="float: left">
+            مبلغ فعلی شما : 0 ریال
+        <br><br>
+            <form method="post">
+            <input name="mount" type="text">
+            <input name="price" style="width: 150px" type="submit" class="btn btn-primary" value="پرداخت">
+            </form>
+        </div>
+        <div style="float: right">
+            <span class="fa fa-credit-card ">اعتبار خود را شارژ کنید</span>
+
+        </div>
+        <br><br>
+        <span style="float: right">با شارژ موجودی حساب خود می‌توانید با سرعت و سهولت بیشتری خرید کنید.</span>
+    </div>
+<?php
+if(isset($_POST['price'])){
+    if($_POST['mount'] < 50000){
+        echo 'error';
+    }
+}
+?>
+</body>
+<?php
+}else{
+    echo "<script>window.open('../login.php?location=users/account.php','_self')</script>";
+
+}
+?>
