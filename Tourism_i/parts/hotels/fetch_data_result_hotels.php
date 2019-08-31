@@ -17,7 +17,7 @@ if (isset($_POST['action'])) {
 
 //qurey of find all hotels that have x num person and in y city
 //    $get_hotels = "SELECT DISTINCT * FROM hotels,rooms WHERE hotels.id_hotel=rooms.id_hotel AND rooms.num_adobt_person='" . $_POST['person_adobt'] . "' AND rooms.num_child_person='" . $_POST['person_child'] . "' AND hotels.id_city='" . $_POST['run_cit'] . "'";
-    $get_hotels = "SELECT DISTINCT * FROM hotels,rooms WHERE hotels.id_hotel=rooms.id_hotel AND hotels.deaction=0 AND rooms.deaction=0 AND rooms.num_adobt_person='" . $_POST['person_adobt'] . "' AND rooms.num_child_person='" . $_POST['person_child'] . "' AND hotels.id_city='" . $_POST['run_cit'] . "' AND rooms.id_room NOT IN(SELECT rezerve.id_room FROM rezerve WHERE rezerve.date_in BETWEEN ('" . $dateIn . "')  AND ('" . $dateOut . "') AND rezerve.date_out BETWEEN ('" . $dateIn . "')  AND ('" . $dateOut . "') ) ";
+    $get_hotels = "SELECT DISTINCT * FROM hotels,rooms WHERE hotels.id_hotel=rooms.id_hotel AND hotels.deaction=0 AND rooms.deaction=0 AND rooms.num_adobt_person='" . $_POST['person_adobt'] . "' AND rooms.num_child_person='" . $_POST['person_child'] . "' AND hotels.id_city='" . $_POST['run_cit'] . "' AND rooms.id_room NOT IN(SELECT rezerve.id_room FROM rezerve WHERE rezerve.date_in BETWEEN ('" . $dateIn . "')  AND ('" . $dateOut . "') OR rezerve.date_out BETWEEN ('" . $dateIn . "')  AND ('" . $dateOut . "') ) ";
 //............................................................................................
     if (isset($_POST['search'])) {
         $search = $_POST['search'];

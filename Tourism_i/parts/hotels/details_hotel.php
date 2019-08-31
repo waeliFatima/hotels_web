@@ -237,7 +237,7 @@ $get_hotel = @mysqli_query($con, $get_hotels);
         </form>
         <div style="margin: 70px"></div>
         <?php
-        $get_rooms = "SELECT DISTINCT * FROM rooms WHERE id_hotel='" . $_GET['id_hotel'] . "'  AND num_adobt_person='" . $person_adobt . "' AND num_child_person='" . $person_child . "' AND rooms.deaction=0  AND id_room NOT IN(SELECT rezerve.id_room FROM rezerve WHERE rezerve.date_in BETWEEN ('" . $dateIn . "')  AND ('" . $dateOut . "') AND rezerve.date_out BETWEEN ('" . $dateIn . "')  AND ('" . $dateOut . "')) ORDER by rooms.price ASC ";
+        $get_rooms = "SELECT DISTINCT * FROM rooms WHERE id_hotel='" . $_GET['id_hotel'] . "'  AND num_adobt_person='" . $person_adobt . "' AND num_child_person='" . $person_child . "' AND rooms.deaction=0  AND id_room NOT IN(SELECT rezerve.id_room FROM rezerve WHERE rezerve.date_in BETWEEN ('" . $dateIn . "')  AND ('" . $dateOut . "') OR rezerve.date_out BETWEEN ('" . $dateIn . "')  AND ('" . $dateOut . "')) ORDER by rooms.price ASC ";
         $get_room = @mysqli_query($con, "SET NAMES utf8");
         $get_room = @mysqli_query($con, "SET CHARACTER SET utf8");
         $get_room = @mysqli_query($con, $get_rooms);
@@ -252,8 +252,7 @@ $get_hotel = @mysqli_query($con, $get_hotels);
                         <div style="margin-top:30px "></div>
                         <div style="width: 96% ;height: 140px;background-color: white; margin: 0 auto;padding: 20px;font-size: 16px;color: #555555">
                             <h4 style="font-size: 22px">اتاق دو تخته</h4>
-                            <!--                    <i class="fa fa-coffee"></i> صبحانه-->
-                            <!--                    <span style="margin: 7px"> | </span>-->
+                           
                             <?php
                             $ro= $row_room['id_room'];
                             $myq="SELECT room_faci.*,faci_and_room.* FROM rooms,faci_and_room,room_faci WHERE room_faci.id_room_faci=faci_and_room.id_faci AND faci_and_room.id_room=$ro GROUP BY id_faci";
@@ -302,8 +301,8 @@ $get_hotel = @mysqli_query($con, $get_hotels);
                 <?php
                 if (isset($_POST['rez']))
                 {
-
-                    echo "<script>window.open('../rez_and_checkout.php?id_room=$id_room&dateIn=$dateIn&dateOut=$dateOut&person_adobt=$person_adobt&person_child=$person_child&price=1255&id_hotel=$id_hotel','_self')</script>";
+                    $all= $price*$differ_day;
+                    echo "<script>window.open('../rez_and_checkout.php?id_room=$id_room&dateIn=$dateIn&dateOut=$dateOut&person_adobt=$person_adobt&person_child=$person_child&price=$all&id_hotel=$id_hotel','_self')</script>";
 
                     ?>
 
