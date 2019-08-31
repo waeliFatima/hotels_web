@@ -340,7 +340,7 @@ include "header.php";
                 echo 'lest';
             }
             //------------------------------------------------------
-            $creater = mysqli_query($con, "INSERT INTO `rezerve_and_costomer`(`id_rezerve`, `id_costomer`) VALUES ('1','$id_customer')");
+            $creater = mysqli_query($con, "INSERT INTO `rezerve_and_costomer`(`id_rezerve`, `id_costomer`) VALUES ('$id_payment','$id_customer')");
 
         }
 
